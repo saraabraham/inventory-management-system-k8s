@@ -1,0 +1,69 @@
+body {
+  background-color: darkred;
+}
+
+#text {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-family:Cursive;
+}
+
+#game {
+  max-width: 800px;
+  max-height: 900px;
+  background-color: lightyellow;
+  color: white;
+  margin: 0 auto;
+  padding: 10px;
+  font-size : 20px;
+}
+
+#controls {
+  border: 1px black solid;
+  padding: 5px;
+  font-size : 20px;
+}
+
+#stats {
+  border: 1px black solid;
+  color: black;
+  padding: 5px;
+  border-radius:4px;
+}
+
+#monsterStats {
+  display: none;
+  border: 1px black solid;
+  color: white;
+  padding: 5px;
+  background-color: red;
+}
+
+.stat {
+  padding-right: 10px;
+}
+
+span{
+  font-family:Cursive;
+  font-weight:bold;
+}
+
+button{
+  background-color: lightblue;
+  font-size : 20px;
+  border-radius:8px;
+  font-family:Cursive;
+  font-weight:bold;
+}
+
+button:hover{
+  background-color: pink;
+}
+
+h1{
+  text-align:center;
+  color:black;
+  font-family:Cursive;
+  font-weight:bold;
+}
