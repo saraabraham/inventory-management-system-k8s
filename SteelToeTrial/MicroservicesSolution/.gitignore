@@ -1,0 +1,9 @@
+# Ignore common OS files
+.DS_Store
+.localized
+.metadata/
+
+# Ignore all files in the parent directory
+# This is a very broad rule and might need to be more specific.
+# But given your output, it's necessary.
+../
