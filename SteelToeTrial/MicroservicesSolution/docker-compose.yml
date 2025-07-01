@@ -1,0 +1,117 @@
+version: '3.8'
+
+services:
+  # Spring Cloud Config Server
+  # Spring Cloud Config Server
+  config-server:
+    image: steeltoe.azurecr.io/config-server:latest 
+    container_name: spring-config-server
+    environment:
+      # This is the new setting to point to your Git repository
+      SPRING_CLOUD_CONFIG_SERVER_GIT_URI: https://github.com/saraabraham/steeltoe-config-repo
+    # You can remove these as they are for local files.
+    # SPRING_CLOUD_CONFIG_SERVER_GIT_SEARCH_PATHS: config-repo
+    # SPRING_PROFILES_ACTIVE: native
+    # # Add credentials if your repository is private
+    # SPRING_CLOUD_CONFIG_SERVER_GIT_USERNAME: your_username
+    # SPRING_CLOUD_CONFIG_SERVER_GIT_PASSWORD: your_personal_access_token
+    ports:
+      - "8888:8888"
+    networks:
+      - microservices_network
+    # You can remove the volume mount for config-repo, as it's now fetched from Git
+    # volumes:
+    #   - ./config-repo:/config-repo 
+    restart: always
+
+  # .NET Product Service
+  product-service:
+    build:
+      context: .
+      dockerfile: ./ProductService/Dockerfile
+    container_name: product-service-app
+    ports:
+      - "8081:8081"
+    environment:
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      SPRING_APPLICATION_NAME: product-service
+    networks:
+      - microservices_network
+    depends_on:
+      - config-server
+      - product-db
+    restart: always
+
+  # .NET Order Service
+  order-service:
+    build:
+      context: .
+      dockerfile: ./OrderService/Dockerfile
+    container_name: order-service-app
+    ports:
+      - "8082:8082"
+    environment:
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      SPRING_APPLICATION_NAME: order-service
+    networks:
+      - microservices_network
+    depends_on:
+      - config-server
+      - order-db
+    restart: always
+
+  # PostgreSQL database for products
+  product-db:
+    image: postgres:15-alpine
+    container_name: product-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: productuser
+      POSTGRES_PASSWORD: productpassword
+      POSTGRES_DB: productdb
+    volumes:
+      - product_db_data:/var/lib/postgresql/data
+    networks:
+      - microservices_network
+    restart: always
+
+  # PostgreSQL database for orders
+  order-db:
+    image: postgres:15-alpine
+    container_name: order-db
+    ports:
+      - "5433:5432" # Use a different host port if 5432 is in use
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: orderdb
+    volumes:
+      - order_db_data:/var/lib/postgresql/data
+    networks:
+      - microservices_network
+    restart: always
+
+  # pgAdmin for database management
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    ports:
+      - "5050:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    depends_on:
+      - product-db
+      - order-db
+    networks:
+      - microservices_network
+    restart: always
+
+networks:
+  microservices_network:
+    driver: bridge
+
+volumes:
+  product_db_data:
+  order_db_data:
