@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "swipejob@s323830",
+    "password": "swipejobb",
+    "database": "swipejobb_se",
+    "host": "mysql512.loopia.se",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "swipejob@s323830",
+    "password": "swipejobb",
+    "database": "swipejobb_se",
+    "host": "mysql512.loopia.se",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "swipejob@s323830",
+    "password": "swipejobb",
+    "database": "swipejobb_se",
+    "host": "mysql512.loopia.se",
+    "dialect": "mysql"
+  }
+}

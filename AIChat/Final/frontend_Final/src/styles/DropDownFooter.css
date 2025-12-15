@@ -1,0 +1,113 @@
+.dropdown-wrapper-foot {
+    position: relative;
+    display: inline-block;
+    width: 270px;
+
+}
+
+.left-icon-foot {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+
+}
+
+.dropdown-header-foot {
+    background: #fff;
+    border: 1px solid #D1D5DB;
+    color: black;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: box-shadow 0.2s ease;
+    font-size: 16px;
+
+}
+
+.dropdown-header-foot:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.right-icon-foot {
+    transition: transform 0.3s ease;
+    margin-right: 1px;
+}
+
+.right-icon-foot.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu-foot {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid rgba(41, 197, 81, 0.3);
+    border-radius: 12px;
+    z-index: 20;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 189px;
+}
+
+.dropdown-menu-foot::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-menu-foot::-webkit-scrollbar-thumb {
+    background: #29C551BF;
+    border-radius: 6px;
+}
+
+.dropdown-menu-foot::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.dropdown-item-foot {
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item-foot:hover {
+    background: #f5f5f5;
+}
+
+/* ==========MOBILE RESPONSIVE STYLES==========*/
+
+@media screen and (min-width: 340px) and (max-width: 540px) {
+    .dropdown-wrapper-foot {
+
+        width: 267px;
+    }
+
+    .dropdown-header-foot {
+
+        height: 34px;
+        font-size: 14px;
+
+    }
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+    .dropdown-wrapper-foot {
+
+        width: 267px;
+    }
+
+    .dropdown-header-foot {
+
+        height: 34px;
+        font-size: 14px;
+
+    }
+}

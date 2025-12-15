@@ -1,0 +1,313 @@
+/* Styles for chatbody */
+.chat-body {
+    margin: 0;
+    min-height: 623px;
+    height: 80%;
+    background-image: url("/public/assets/images/chatBackground.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    padding-top: 120px;
+    margin-top: 70px;
+}
+
+.chat-body h1 {
+    font-size: 50px;
+    font-weight: 400;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 21px;
+    font-weight: 400;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.chat-input {
+    background-color: #F7F4ED;
+    width: 90%;
+    max-width: 90%;
+    margin: auto;
+    height: 165px;
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    padding: 0;
+    border-radius: 30px;
+    outline: none;
+    background-color: #F7F4ED;
+    width: 843px;
+    max-width: 90%;
+    margin: auto;
+    height: 165px;
+    border: 1px solid rgba(28, 28, 28, 0.2);
+    padding: 0;
+
+}
+
+.chat-input textarea {
+    background-color: #F7F4ED;
+    border: none;
+    width: calc(100% - 23px);
+    height: 90px;
+    text-align: left;
+    font-size: 18px;
+    color: #5F5F5D;
+    margin-top: 15px;
+    border-radius: 10px;
+    resize: none;
+    padding: 8px 10px;
+    font-family: 'Inter', sans-serif;
+}
+
+.chat-input textarea:focus {
+    outline: none;
+}
+
+.chat-func {
+    margin-top: 10px;
+    width: calc(100% - 23px);
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    display: flex;
+
+}
+
+.chat-func button {
+    border: 1px solid rgba(41, 197, 81, 0.3);
+    background-color: #F7F4ED;
+    height: 36px;
+    padding: 8px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.chat-func button:hover {
+    background-color: #D9F3E4;
+    border-color: #1D9D43;
+    color: #1D9D43;
+}
+
+.chat-func button img {
+    height: 14px;
+    width: 12.5px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#upload-btn {
+    height: 36px;
+    width: 36px;
+    margin-left: 10px;
+}
+
+#upload-btn img {
+    margin: auto;
+    padding: auto;
+}
+
+#send-btn {
+    background-color: rgba(28, 28, 28, 0.5);
+    border: 1px solid #E5E7EB;
+    margin-left: auto;
+    padding: 2px;
+    height: 38px;
+    width: 40px;
+}
+
+#send-btn img {
+    margin: auto;
+    padding: auto;
+}
+
+#send-btn:active,
+#send-btn:hover {
+    background-color: rgba(28, 28, 28, 0.65);
+    transform: translateY(1px);
+}
+
+.try-funct {
+    align-items: center;
+    justify-content: center;
+}
+
+.try-funct h2 {
+    color: #F5F5F5;
+    font-size: 24px;
+    margin-top: 22px;
+}
+
+.try-funct button {
+    background-color: #262626;
+    border-radius: 10px;
+    color: #F8F8F8;
+    height: 36px;
+    padding: 5px 13px 10px 13px;
+    border-radius: 30px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: none;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.try-funct button:active {
+    background-color: #363636;
+    transform: translateY(1px);
+}
+
+.try-funct button:hover {
+    background-color: #363636;
+}
+
+.try-funct button img {
+    width: 15px;
+    height: 15px;
+    margin-right: 3px;
+    margin-left: 3px;
+    margin-top: 4px;
+
+}
+
+/* ==========MOBILE RESPONSIVE STYLES==========*/
+@media screen and (min-width: 340px) and (max-width: 540px) {
+
+
+    .scrollFuncts {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 0.5rem;
+        padding: 0.5rem;
+        scroll-behavior: smooth;
+
+    }
+
+    .chat-body {
+        padding-top: 60px;
+        min-height: 50vh;
+        margin-top: 46px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    .chat-body h1 {
+        font-size: 32px;
+        margin-top: 15px;
+
+    }
+
+    h2 {
+        font-size: 14px;
+        padding: 0 20px;
+        max-width: 90%;
+    }
+
+    .chat-input {
+        width: 90%;
+        height: 98px;
+        border-radius: 20px;
+    }
+
+    .chat-input textarea {
+        width: calc(100% - 30px);
+        height: 50px;
+        font-size: 14px;
+        margin-top: 2px;
+        margin-left: 1px;
+
+    }
+
+    .chat-func {
+        width: calc(95% - 20px);
+        margin-left: 15px;
+        height: 35px;
+        gap: 5px;
+        margin-top: 1px;
+        padding: auto;
+        overflow-y: hidden;
+        align-items: center;
+        margin-bottom: 0px;
+
+    }
+
+    .chat-func button {
+        font-size: 12px;
+        height: 25px;
+        margin-right: 5px;
+        margin-top: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 2px 3.5px 2px 3.5px;
+
+    }
+
+    #upload-btn {
+        height: 25px;
+        width: 25px;
+        margin-left: 1.5px;
+        padding: 7px;
+    }
+
+    #upload-btn img {
+        height: 7px;
+        width: 7px;
+        margin-bottom: 3.5px;
+    }
+
+    #send-btn {
+        margin-left: 2px;
+        height: 30px;
+        width: 30px;
+        padding: 8px 15px 5px 8px;
+
+    }
+
+    #send-btn img {
+        height: 12px;
+        width: 12px;
+
+    }
+
+
+    .try-funct h2 {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    .try-funct button {
+        font-size: 12px;
+        height: 28px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 2px 15px 10px 10px;
+    }
+
+
+}
+
+@media screen and (min-width: 541px) and (max-width: 1024px) {
+    .scrollFuncts {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 0.5rem;
+        scroll-behavior: smooth;
+    }
+
+
+}

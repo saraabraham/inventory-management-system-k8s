@@ -1,0 +1,300 @@
+.resource {
+    background-image: url("/public/assets/images/chatBackground2.png");
+    margin: 0;
+    height: none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.resource1 {
+    margin-top: 80px;
+    background-color: white;
+    height: 512px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.resource1 h2 {
+    font-size: 30px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    margin-bottom: 4px;
+}
+
+.resource1 h3 {
+    font-size: 16px;
+    font-weight: 300;
+
+}
+
+.dropdown1-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    align-items: flex-start;
+    justify-content: start;
+    width: 740px;
+    margin-left: 340px;
+}
+
+.dropDown-label {
+    font-size: 14px;
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 5px;
+
+}
+
+.dropdown2-container1,
+.dropdown2-container2 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    width: 900px;
+    margin-left: 260px;
+
+}
+
+.dashboard {
+    height: 188px;
+    background-color: #FAFAFA;
+    margin-top: 2px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+
+.dashboard button {
+    font-size: 16px;
+    height: 56px;
+    border-radius: 8px;
+    padding: 2px 30px;
+    margin-right: 20px;
+}
+
+.dashboard button img {
+    margin-right: 12px;
+}
+
+.dashboardBtn {
+    border: 2px solid #29C551;
+    background-color: #FFFFFF;
+    color: #29C551;
+
+}
+
+.dashboardBtn:hover {
+    background-color: #f0f0f0;
+    color: #29C551;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+
+.mobileAppBtn {
+    background-color: #29C551;
+    color: #FFFFFF;
+    border: 2px solid #29C551;
+}
+
+.mobileAppBtn:hover {
+    background-color: #27b04c;
+    /* slightly darker green */
+    border-color: #27b04c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========MOBILE RESPONSIVE STYLES==========*/
+@media screen and (min-width: 340px) and (max-width: 540px) {
+
+    .resource1 {
+        margin-top: 0px;
+        height: 472px;
+
+
+    }
+
+    .resource1 h2 {
+        font-size: 24px;
+        margin-top: 24px;
+        padding: 10px 0px 1px 0px;
+
+    }
+
+    .resource1 h3 {
+        font-size: 13px;
+        padding: 0px;
+
+    }
+
+    .dropdown1-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: start;
+        width: 325px;
+        margin: auto;
+        height: 42px;
+        margin-top: 12px;
+        margin-bottom: 35px;
+    }
+
+    .dropDown-label {
+        font-size: 12px;
+        font-weight: 300;
+        color: #333;
+        margin-bottom: 10px;
+
+    }
+
+    .dropdown-wrapper1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: start;
+        width: 325px;
+        margin: auto;
+        height: 184px;
+        margin-top: 5px;
+        margin-bottom: 35px;
+    }
+
+
+    .dropdown2-container1 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-wrap: wrap;
+        width: 338px;
+        height: 80px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding: auto;
+        padding-bottom: 0px;
+    }
+
+    .dropdown2-container2 {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 338px;
+        height: 85px;
+        margin: auto;
+        margin-top: 10px;
+
+    }
+
+
+    .dashboard {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 58px;
+        width: 100%;
+        background-color: #FAFAFA;
+        padding: 0px 15px;
+        border-top: 1px solid #29C551;
+        border-bottom: 1px solid #29C551;
+
+    }
+
+
+    .dashboard button {
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        /* prevents text from going to next line */
+        gap: 2px;
+        height: 32px;
+        width: 160px;
+        padding: 5px 5px 5px 2px;
+        border-radius: 8px;
+        margin-right: 15px;
+        text-align: left;
+
+
+    }
+
+    .dashboard button img {
+        margin: 0px 3px 0px 2px;
+        padding: 0px 0px;
+        width: 16px;
+        height: 14px;
+
+    }
+
+    .dashboardBtn {
+        border: 1px solid #29C551;
+        background-color: #FFFFFF;
+        color: #29C551;
+
+
+    }
+
+    .mobileAppBtn {
+        background-color: #29C551;
+        color: #FFFFFF;
+        border: 1px solid #29C551;
+
+    }
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+
+    .resource1 {
+        margin-top: 0px;
+        height: 472px;
+
+
+    }
+
+    .dropdown1-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        align-items: flex-start;
+        justify-content: start;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .dropDown-label {
+        font-size: 14px;
+        font-weight: 300;
+        color: #333;
+        margin-bottom: 5px;
+
+    }
+
+    .dropdown2-container1,
+    .dropdown2-container2 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 22px;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+}

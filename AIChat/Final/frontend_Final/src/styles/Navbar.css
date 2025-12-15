@@ -1,0 +1,157 @@
+/* Styling for Navbar */
+.navbar {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.99);
+    padding: 1rem;
+    height: 70px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 15px;
+    border-bottom: 1px solid #E5E5E5;
+
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.navbar-left {
+    display: flex;
+}
+
+.navbar-left .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    width: 123px;
+    height: 45px;
+    margin-left: 75px;
+    margin-top: 5px;
+}
+
+.navbar-left .nav-links {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin-left: 35px;
+    margin-top: 17px;
+}
+
+.navbar-left .nav-links li {
+    margin-right: 1.5rem;
+}
+
+.navbar-left .nav-links a {
+    color: #1C1C1C;
+    text-decoration: none;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+#login {
+    width: 72px;
+    height: 32px;
+    background-color: #F7F4ED;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid #ECEAE4;
+    margin-right: 8px;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+    cursor: pointer;
+}
+
+#login:hover {
+    background-color: #ECEAE4;
+    border-color: #DAD7D0;
+}
+
+#login:active {
+    background-color: #DAD7D0;
+    transform: translateY(1px);
+}
+
+#signup {
+    width: 80px;
+    height: 32px;
+    background-color: #1C1C1C;
+    border-radius: 6px;
+    color: #FCFBF8;
+    font-size: 14px;
+    border: 1px solid #1C1C1C;
+    transition: background-color 0.1s ease, transform 0.1s ease;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#signup:hover {
+    background-color: #2D2D2D;
+    border-color: #2D2D2D;
+}
+
+#signup:active {
+    background-color: #3C3C3C;
+    transform: translateY(1px);
+}
+
+/* ========== MOBILE RESPONSIVE STYLES ========== */
+
+@media screen and (min-width: 100px) and (max-width: 540px) {
+    .navbar {
+        height: 46px;
+    }
+
+    .navbar-left .logo {
+        margin-left: 0px;
+        width: 110px;
+        height: 40px;
+    }
+
+    .navbar-left {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .navbar-left .nav-links {
+        display: none;
+    }
+
+    #login {
+        width: 55px;
+        height: 23px;
+        font-size: 10px;
+
+    }
+
+    #signup {
+        width: 55px;
+        height: 23px;
+        font-size: 10px;
+        margin-right: 0px;
+
+    }
+}
+
+@media screen and (min-width: 541px) and (max-width: 800px) {
+    .navbar {
+        height: 70px;
+    }
+
+    .navbar-left .nav-links {
+        display: none;
+    }
+
+    .navbar-left .logo {
+        margin-left: 0px;
+        width: 110px;
+        height: 40px;
+    }
+}

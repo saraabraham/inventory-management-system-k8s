@@ -1,0 +1,137 @@
+.dropdown-wrapper-country {
+    position: relative;
+    display: inline-block;
+    width: 740px;
+    height: 48px;
+}
+
+
+
+.dropdown-header1 {
+    background: #fff;
+    border: 1px solid #29C551;
+    cursor: pointer;
+    height: 58px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+    width: 740px;
+    height: 48px;
+    border-radius: 8px;
+    border: 1px solid rgba(41, 197, 81, 0.3);
+    font-size: 15px;
+    background-color: #fff;
+    color: black;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    padding-left: 10px;
+
+}
+
+.dropdown-header1:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.right-icon1 {
+    transition: transform 0.3s ease;
+    margin-bottom: 3px;
+    margin-right: 10px;
+}
+
+.right-icon1.rotate {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu1 {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid rgba(41, 197, 81, 0.3);
+    border-radius: 8px;
+    z-index: 20;
+    font-size: 15px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    max-height: 189px;
+    text-align: left;
+
+}
+
+.dropdown-menu1::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-menu1::-webkit-scrollbar-thumb {
+    background: #29C551BF;
+    border-radius: 6px;
+}
+
+.dropdown-menu1::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+.dropdown-item1 {
+    padding: 10px 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.dropdown-item1:hover {
+    background: #29C55140;
+}
+
+/* ==========MOBILE RESPONSIVE STYLES==========*/
+@media screen and (min-width: 340px) and (max-width: 540px) {
+
+    .dropdown-wrapper-country {
+        width: 325px;
+        height: 42px;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+
+    }
+
+    .dropdown-header1 {
+        margin: 0px;
+        width: 325px;
+        height: 42px;
+        font-size: 14px;
+
+    }
+
+    .dropdown-menu1 {
+        font-size: 14px;
+    }
+
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+    .dropdown-wrapper-country {
+        width: 100%;
+        height: 48px;
+        align-items: center;
+        justify-content: center;
+        margin: 0px;
+
+    }
+
+    .dropdown-header1 {
+        margin: 0px;
+        width: 100%;
+        height: 48px;
+        font-size: 14px;
+
+    }
+
+    .dropdown-menu1 {
+        font-size: 14px;
+    }
+
+
+}

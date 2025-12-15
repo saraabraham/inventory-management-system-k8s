@@ -1,0 +1,243 @@
+/* ========== GLOBAL STYLES ========== */
+.MoreResource {
+    width: 100%;
+    max-width: 1440px;
+    background-color: #FFFFFF;
+    margin: 2px auto 0;
+    font-family: "Outfit", sans-serif;
+    padding: 50px 0 50px;
+}
+
+.MoreResource h2 {
+    font-size: 30px;
+    margin-bottom: 4px;
+    font-family: "Inter";
+    margin-top: 20px;
+}
+
+.MoreResource h3 {
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Inter";
+}
+
+/* ========== CAREER RESOURCES WRAPPER ========== */
+.career-resources-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 75px auto 0;
+    justify-content: center;
+}
+
+/* ========== CARD STYLES ========== */
+.card {
+    width: 384px;
+    height: 446px;
+    border: 1px solid #F3F4F6;
+    border-radius: 16px;
+    box-shadow: 0px 3px 12px 3px #E5E7EB;
+    text-align: left;
+    font-family: "Outfit", sans-serif;
+    background-color: #fff;
+}
+
+.card .card-img {
+    height: 64px;
+    width: 64px;
+    background-color: rgba(41, 197, 81, 0.1);
+    padding: 16px;
+    border-radius: 12px;
+    margin: 30px 0 0 30px;
+}
+
+.card img {
+    width: 30px;
+    height: 30px;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin: 15px 0 0 30px;
+}
+
+.card ul {
+    margin-top: 25px;
+    padding-left: 40px;
+}
+
+.card a {
+    text-decoration: underline;
+    color: #29C551;
+    font-size: 16px;
+}
+
+.card p {
+    margin-top: 1.5px;
+    font-size: 14px;
+    color: #4B5563;
+}
+
+.card button {
+    width: 318px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #29C551;
+    border: none;
+    margin-left: 30px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.card button:hover {
+    background-color: #27b04c;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Bullet styling */
+ul li::marker {
+    color: #29C551;
+    font-size: 1.2em;
+}
+
+/* ========== SHOW MORE BUTTON ========== */
+.show-more-btn {
+    margin: 35px auto 2px;
+    display: block;
+    width: 101px;
+    height: 28px;
+    padding: 5px 5px;
+    background-color: #FFFFFF;
+    color: black;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;
+    border: 1px solid #F3F4F6;
+    box-shadow: 0px 3px 12px 3px #E5E7EB;
+}
+
+
+.show-more-btn:hover {
+    background-color: #ECEAE4;
+    border-color: #DAD7D0;
+}
+
+.show-more-btn:active {
+    background-color: #DAD7D0;
+    transform: translateY(1px);
+}
+
+/* ========== MOBILE RESPONSIVE STYLES ========== */
+@media screen and (max-width: 768px) {
+    .MoreResource h2 {
+        font-size: 24px;
+        margin-bottom: 4px;
+        font-family: "Inter";
+        margin-top: 0px;
+        width: 282px;
+    }
+
+    .MoreResource h3 {
+        font-size: 12px;
+        font-weight: 300;
+        font-family: "Inter";
+        width: 282px;
+        margin: 5px auto;
+        line-height: 25px;
+    }
+
+
+    .career-resources-wrapper {
+        gap: 15px;
+        margin-top: 25px;
+        justify-content: center;
+        overflow: visible;
+    }
+
+    /* Initially hide all cards starting from the 4th child */
+    .career-resources-wrapper .card:nth-child(n+4) {
+        display: none;
+    }
+
+    /* When show-more-active class is added, display hidden cards */
+    .career-resources-wrapper.show-more-active .card:nth-child(n+4) {
+        display: block;
+    }
+
+    .show-more-btn {
+        display: block;
+    }
+
+    /* Card styling for mobile */
+    .card {
+        width: 277px;
+        height: 343px;
+    }
+
+    .card .card-img {
+        height: 42px;
+        width: 42px;
+        padding: 8px;
+        margin: 25px 0 10px 25px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .card ul {
+        margin-top: 10px;
+        padding-left: 30px;
+        margin-left: 10px;
+    }
+
+    .card a {
+        font-size: 12px;
+    }
+
+    .card p {
+        font-size: 10px;
+    }
+
+    .card button {
+        width: 132px;
+        height: 38px;
+        margin-left: 65px;
+        font-size: 12px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1024px) {
+    .card h2 {
+        margin-left: 30px;
+    }
+
+    .card ul {
+        margin-top: 10px;
+
+    }
+}
+
+/* ========== DESKTOP ========== */
+@media screen and (min-width: 769px) {
+    .career-resources-wrapper .card {
+        display: block;
+    }
+
+    .show-more-btn {
+        display: none;
+    }
+
+    .career-resources-wrapper {
+        max-height: none;
+    }
+
+}
