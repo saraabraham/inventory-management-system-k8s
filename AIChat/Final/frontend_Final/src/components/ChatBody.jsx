@@ -31,7 +31,7 @@ const ChatBody = () => {
             navigate('/chatbot', {
                 state: {
                     initialPrompt: prompt,
-                    initialResponse: data.message, // API reply
+                    initialResponse: data.message, // API response
                 },
             });
 
